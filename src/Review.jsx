@@ -6,11 +6,12 @@ export default function Review({
   option4,
   value,
   name,
+  handleChange,
 }) {
   return (
     <div>
       <span>{text}</span>
-      <select name={name} id="" value={value}>
+      <select name={name} id="" value={value} onChange={handleChange}>
         <option value={option1}>Dissatisfied (0%)</option>
         <option value={option2}>It was okay (5%)</option>
         <option value={option3}>It was good (10%)</option>

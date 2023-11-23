@@ -10,10 +10,22 @@ function App() {
     review1: "",
     review2: "",
   });
-  function handleChange() {}
+  function handleChange(e) {
+    setState((prev) => {
+      return {
+        ...prev,
+        [e.target.name]: e.target.value,
+      };
+    });
+  }
   return (
     <>
-      <Bill value={state.bill} name="bill" text="How much was the bill" />
+      <Bill
+        value={state.bill}
+        name="bill"
+        text="How much was the bill"
+        handleChange={handleChange}
+      />
       <Review
         text="How did you like the service?"
         option1="Dissatisfied"
@@ -22,6 +34,7 @@ function App() {
         option4="Amazing"
         value={state.review1}
         name="review1"
+        handleChange={handleChange}
       />
       <Review
         text="How did your friend like the services?"
@@ -31,6 +44,7 @@ function App() {
         option4="Amazing"
         value={state.review2}
         name="review2"
+        handleChange={handleChange}
       />
 
       <Text />
