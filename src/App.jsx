@@ -29,9 +29,9 @@ function App() {
       <Review
         text="How did you like the service?"
         option1="Dissatisfied"
-        option2="Okay"
-        option3="Good"
-        option4="Amazing"
+        option2="It was okay"
+        option3="It was good"
+        option4="Absolutely amazing Absolutely amazing"
         value={state.review1}
         name="review1"
         handleChange={handleChange}
@@ -39,9 +39,9 @@ function App() {
       <Review
         text="How did your friend like the services?"
         option1="Dissatisfied"
-        option2="Okay"
-        option3="Good"
-        option4="Amazing"
+        option2="It was okay"
+        option3="It was good"
+        option4="Absolutely amazing Absolutely amazing"
         value={state.review2}
         name="review2"
         handleChange={handleChange}
