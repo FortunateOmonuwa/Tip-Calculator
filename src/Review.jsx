@@ -7,15 +7,16 @@ export default function Review({
   value,
   name,
   handleChange,
+  calculate,
 }) {
   return (
     <div>
       <span>{text}</span>
       <select name={name} id="" value={value} onChange={handleChange}>
-        <option value="Dissatisfied"> {option1} (0%)</option>
-        <option value="Okay"> {option2} (5%)</option>
-        <option value="Good"> {option3} (10%) </option>
-        <option value="Amazing">{option4} (20%)</option>
+        <option value={option1}> Dissatisfied {option1}%</option>
+        <option value={option2}> It was okay {option2}%</option>
+        <option value={option3}> it was good {option3}% </option>
+        <option value={option4}>Absolutely amazing {option4}%</option>
       </select>
     </div>
   );
