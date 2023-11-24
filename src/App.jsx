@@ -18,6 +18,18 @@ function App() {
       };
     });
   }
+
+  function handleKeyDown(e) {
+    if (isNaN(e.key)) {
+      e.preventDefault();
+      alert("Please input a Number");
+      HandleReset();
+    }
+  }
+
+  function HandleReset() {
+    setState({ bill: "", review1: "", review2: "" });
+  }
   return (
     <>
       <Bill
@@ -25,6 +37,7 @@ function App() {
         name="bill"
         text="How much was the bill"
         handleChange={handleChange}
+        keyDown={handleKeyDown}
       />
       <Review
         text="How did you like the service?"
@@ -41,14 +54,14 @@ function App() {
         option1="Dissatisfied"
         option2="It was okay"
         option3="It was good"
-        option4="Absolutely amazing Absolutely amazing"
+        option4="Absolutely amazing"
         value={state.review2}
         name="review2"
         handleChange={handleChange}
       />
 
-      <Text />
-      <Button />
+      <Text bill={state.bill} />
+      <Button handleReset={HandleReset} />
     </>
   );
 }

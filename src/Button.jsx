@@ -1,3 +1,3 @@
-export default function Button() {
-  return <button>Reset</button>;
+export default function Button({ handleReset }) {
+  return <button onClick={handleReset}>Reset</button>;
 }
