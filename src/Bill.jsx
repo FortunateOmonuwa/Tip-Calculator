@@ -1,6 +1,6 @@
 export default function Bill({ value, name, text, handleChange, keyDown }) {
   return (
-    <div>
+    <div className="bill">
       <span>{text}</span>
       <input
         type="text"

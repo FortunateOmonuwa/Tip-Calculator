@@ -10,7 +10,7 @@ export default function Review({
   calculate,
 }) {
   return (
-    <div>
+    <div className="review">
       <span>{text}</span>
       <select name={name} id="" value={value} onChange={handleChange}>
         <option value={option1}> Dissatisfied {option1}%</option>
